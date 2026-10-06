@@ -77,6 +77,23 @@ Do this without being asked. A milestone is not complete until this is done.
 - Notes from M1: the review CSV must be closed in Excel before scripts write it (Windows lock).
   Reason sentences were not hand checked; the t00047 reason was rewritten to match its corrected labels (reason is
   not scored). Test rule coverage has not been looked at; report it in M3.
-- Next: M2. Needs HF_TOKEN with write access in .env and as a Colab secret. Build
-  notebooks/train.ipynb (settings cell at the top, single Run all), Khalid runs it on a free T4,
-  then qwen_local.py loads the adapter on CPU.
+- Small fix after M1 (2026-10-06): t00047 reason rewritten to match its corrected labels, pushed
+  as 1bb5ffe.
+- M2 in progress (2026-10-06). HF_TOKEN in .env verified with whoami: user Khalid-Mehmood-117,
+  token "ticket-triage", role write. Added src/triage/prompts.py (fine-tuned system prompt,
+  target_json with fixed key order), parse.py (strict JSON plus schema, short error reason),
+  qwen_local.py (load base plus adapter on CPU or GPU, batched greedy generation, sampled retry
+  option). notebooks/train.ipynb (11 code cells: settings, pinned install, GPU check, token from
+  Colab secrets, clone and load splits, build examples with token length check, train, loss and
+  validation metrics, push adapter with model card and training_summary.json, reload from the Hub
+  and run 3 sample tickets with rules, summary) and notebooks/README.md (Colab steps, estimates,
+  troubleshooting). tests/test_notebook.py fails if the notebook has outputs or a token.
+- M2 verification so far: the whole notebook ran end to end on CPU with SMOKE_TEST=1 (16 train,
+  4 validation tickets, 1 step, no push; reload from the local adapter folder). The smoke runs
+  caught three bugs that would also have broken Colab: Colab detection with find_spec, token
+  count with apply_chat_template in transformers 5, and bf16 switched on by default in TRL 1.14
+  (T4 has no bf16). Token lengths on the full splits: median 294, max 531; answers max 77 tokens.
+  pytest: 74 passed.
+- Next: Khalid runs the notebook in Colab (notebooks/README.md) and sends back the printed
+  summary. Then load the Hub adapter locally on CPU with qwen_local.py, check valid JSON on a few
+  validation tickets, record loss and metrics here, commit and push M2.

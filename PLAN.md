@@ -95,10 +95,17 @@ ticket -> fine-tuned Qwen (greedy) -> parse + validate
 - `notebooks/train.ipynb`, runnable top to bottom on a free T4. It clones the public GitHub repo
   for the splits, reads HF_TOKEN from Colab secrets (`google.colab.userdata`), trains and pushes the
   LoRA adapter to `Khalid-Mehmood-117/qwen2.5-0.5b-ticket-triage-lora` on the Hub with a model card.
-- TRL SFTTrainer, chat template of Qwen2.5, loss on the assistant JSON only.
-- Starting hyperparameters: LoRA r=16, alpha=32, dropout 0.05 on all attention and MLP
-  projections, lr 2e-4, cosine schedule, 3 epochs, effective batch 16, max length 512, fp16 (T4 has
-  no bf16). Early stop on validation loss. Final values recorded in the notebook and model card.
+- TRL SFTTrainer with prompt/completion examples (system + ticket as prompt, the compact JSON
+  answer as completion), chat template of Qwen2.5, loss on the completion only.
+- Starting hyperparameters: LoRA r=16, alpha=32, dropout 0.05 on all linear layers, lr 2e-4,
+  cosine schedule, 5% warmup, up to 3 epochs, batch 4 with 4 accumulation steps (effective 16),
+  max length 1024 (longest example is 531 tokens), fp16 with bf16 off (T4 has no bf16), gradient
+  checkpointing off. Early stop on validation loss (patience 1), best epoch kept. Final values
+  recorded in the notebook and model card.
+- Pinned in the notebook and requirements.txt: transformers 5.18.0, peft 0.21.2, trl 1.14.1,
+  datasets 5.1.0, accelerate 1.15.0, huggingface_hub 1.33.0 (Colab keeps its own torch).
+- The notebook imports prompts.py, parse.py, qwen_local.py and rules.py from the cloned repo, so
+  training, validation scoring and local inference share one prompt and one parser.
 - Short system prompt for the fine-tuned model (the label sets only). The model learns the rest.
 - Local code never needs a GPU. Local inference loads base plus adapter on CPU with transformers
   and peft. 0.5B in float32 is about 2 GB of RAM.

@@ -25,6 +25,7 @@ dist/
 outputs/
 checkpoints/
 adapters/
+adapter/
 .cache/
 wandb/
 
