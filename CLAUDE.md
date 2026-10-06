@@ -75,7 +75,7 @@ Do this without being asked. A milestone is not complete until this is done.
   Corrections applied to data/splits/test.jsonl, agreement in data/hand_check/agreement.json and
   data/DATA_CARD.md. README heading fixed, synthetic data and bias notes added. pytest: 59 passed.
 - Notes from M1: the review CSV must be closed in Excel before scripts write it (Windows lock).
-  Reason sentences were not hand checked; t00047 keeps a reason from its old label (reason is
+  Reason sentences were not hand checked; the t00047 reason was rewritten to match its corrected labels (reason is
   not scored). Test rule coverage has not been looked at; report it in M3.
 - Next: M2. Needs HF_TOKEN with write access in .env and as a Colab secret. Build
   notebooks/train.ipynb (settings cell at the top, single Run all), Khalid runs it on a free T4,

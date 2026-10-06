@@ -166,8 +166,8 @@ reviewer kept the dataset label.
 What this means: about 1 in 5 sampled labels needed a fix, almost all on the fuzzy priority and
 sentiment boundaries; needs_human was right every time. The 118 test tickets outside the sample
 were not hand checked and carry similar noise, so test scores on priority and sentiment have a
-ceiling below 100%. Only labels were checked: the reason sentences were not reviewed, and the
-reason of t00047 still describes the original "wrong company" label (reason is not scored).
+ceiling below 100%. Only labels were checked, not the reason sentences. The reason of t00047 was
+rewritten by hand to match its corrected labels (marked `reason_rewritten: true`).
 
 ## Known biases and limitations
 - **gpt-4o-mini wrote the tickets.** Its phrasing and its idea of a "typical" ticket are built
