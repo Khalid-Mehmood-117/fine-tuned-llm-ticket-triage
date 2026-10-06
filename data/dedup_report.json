@@ -1,0 +1,33 @@
+{
+  "generated": 1700,
+  "exact_duplicates_removed": 2,
+  "near_duplicates_removed": 18,
+  "near_duplicate_ids_removed": [
+    "t00119",
+    "t00327",
+    "t00445",
+    "t00482",
+    "t00960",
+    "t00963",
+    "t01166",
+    "t01288",
+    "t01289",
+    "t01328",
+    "t01330",
+    "t01363",
+    "t01369",
+    "t01433",
+    "t01511",
+    "t01601",
+    "t01654",
+    "t01680"
+  ],
+  "kept": 1680,
+  "dup_threshold": 0.85,
+  "group_threshold": 0.7,
+  "split_sizes": {
+    "train": 1343,
+    "validation": 169,
+    "test": 168
+  }
+}

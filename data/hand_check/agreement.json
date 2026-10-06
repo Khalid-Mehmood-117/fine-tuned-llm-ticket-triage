@@ -1,0 +1,30 @@
+{
+  "rows": 50,
+  "rows_fully_correct": 41,
+  "row_agreement": 0.82,
+  "dataset_label_agreement_per_field": {
+    "category": 0.98,
+    "priority": 0.9,
+    "sentiment": 0.92,
+    "needs_human": 1.0,
+    "suggested_action": 0.98
+  },
+  "first_pass_agreement_with_final_per_field": {
+    "category": 1.0,
+    "priority": 0.98,
+    "sentiment": 0.96,
+    "needs_human": 1.0,
+    "suggested_action": 1.0
+  },
+  "corrected_ids": [
+    "t00810",
+    "t00955",
+    "t01466",
+    "t00047",
+    "t01153",
+    "t00814",
+    "t00191",
+    "t01163",
+    "t00310"
+  ]
+}

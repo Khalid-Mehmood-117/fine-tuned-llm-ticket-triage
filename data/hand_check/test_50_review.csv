@@ -1,0 +1,165 @@
+﻿id,language,ticket,english_gloss,fields,dataset_label,first_pass_label,first_pass_differs,first_pass_note,confirm,corrections,note
+t00810,pt,"Assunto: Cobrança duplicada na conta
+
+Olá, suporte da Glowhome,
+
+Recebi a fatura deste mês e percebi que fui cobrada duas vezes pela mesma compra na minha conta. O número do meu pedido é 67349. Isso é absolutamente inaceitável, e eu não posso acreditar que isso está acontecendo. 
+
+Se não fosse inconveniente, teria esperado mais, mas preciso que isso seja resolvido o mais rápido possível. 
+
+Aguardo uma solução.
+
+Atenciosamente,
+Lea",Subject: duplicate charge. Was charged twice for the same purchase on this month's bill (order 67349); finds it unacceptable and wants it fixed as soon as possible.,category | priority | sentiment | needs_human | suggested_action,billing | medium | negative | false | route_to_billing,billing | high | negative | false | route_to_billing,priority,"Double charge is money taken wrongly, which labels.md puts at high.",N,priority=high,
+t00677,en,"hi, is anyone there? i need help with something but not sure where to start",,category | priority | sentiment | needs_human | suggested_action,other | low | neutral | false | ask_for_details,other | low | neutral | false | ask_for_details,,,Y,,
+t01380,en,Order ORD-404668 hasn't shipped. Event in two days.,,category | priority | sentiment | needs_human | suggested_action,shipping | high | neutral | false | route_to_shipping,shipping | high | neutral | false | route_to_shipping,,Event in two days is a deadline within 48 hours.,Y,,
+t00716,en,"Dear Zephyr Mobile Support Team,
+
+I am considering canceling my service and would like to know the process involved in doing so. Can you please provide me with the necessary steps? 
+
+Thank you for your assistance.
+
+Best regards,
+Chloe
+Order Reference: 4058093",,category | priority | sentiment | needs_human | suggested_action,cancellation | low | neutral | false | reply_with_kb_article,cancellation | low | neutral | false | reply_with_kb_article,,"Only asks how to cancel, has not decided.",Y,,
+t00064,ur,"Hello Zephyr Mobile Team! Mujhe aapka service bohot pasand hai, khaas kar mera SIM plan! Lekin, mujhe ek shandar suggestion hai: agar aap log apne data plans mein thoda aur data add karden, to zyada customers ke liye fayda hoga. Aur ek choti si baat, kya mai apne account par ek aur user add kar sakta hun? Shukriya!",Loves the service and the SIM plan; suggests adding more data to the plans; also asks whether another user can be added to the account. Thanks.,category | priority | sentiment | needs_human | suggested_action,feature_request | low | positive | false | reply_with_kb_article,feature_request | low | positive | false | reply_with_kb_article,,,Y,,
+t00942,en,"I'm really frustrated with my recent order, ORD-6060560. It was supposed to arrive last week, but there's been no sign of it and the tracking hasn’t updated. This is causing some real inconvenience for me as I needed the new phone for important work calls. On top of that, could you please let me know the opening hours for customer support? It would help if I needed to reach out again.",,category | priority | sentiment | needs_human | suggested_action,shipping | medium | negative | false | route_to_shipping,shipping | medium | negative | false | route_to_shipping,,"Late a week and needed for work, but no hard deadline stated.",Y,,
+t01025,en,"I've been waiting for my refund for order No. 089813 for weeks now! This is absolutely UNACCEPTABLE! I've reached out multiple times, and every time I've been promised a quick resolution, but nothing has happened. At this point, I feel like I'm being ignored. This delay is costing me money as I need to make a purchase elsewhere. I need my refund IMMEDIATELY! This situation is beyond frustrating.",,category | priority | sentiment | needs_human | suggested_action,refund | high | negative | true | escalate_to_supervisor,refund | high | negative | true | escalate_to_supervisor,,Promised refund missing for weeks after repeated contacts.,Y,,
+t00144,en,"Subject: Inquiry About Changing Login Email
+
+Hello TaskNest Support,
+
+I wanted to ask how I can change the email address or username associated with my account. My order number is 85662462.
+
+Thank you for your assistance.
+
+Best,
+Valeria",,category | priority | sentiment | needs_human | suggested_action,account_access | low | neutral | false | reply_with_kb_article,account_access | low | neutral | false | reply_with_kb_article,,,Y,,
+t00700,en,"hey, my account is locked after multiple login attempts. order no. 418938. i need to access it today for work, otherwise, i might miss important payments. pls help me get back in as soon as possible.",,category | priority | sentiment | needs_human | suggested_action,account_access | high | neutral | false | reset_account_access,account_access | high | neutral | false | reset_account_access,,Locked out and needs access today. Sentiment borderline neutral or negative.,Y,,
+t00955,en,"I've been a customer of Zephyr Mobile for quite some time now, and I have to say I’m starting to feel quite disappointed. My account number is 5078967, and for the past several days, I haven't been able to get any mobile signal or data at my home. I rely heavily on my phone for both work and personal matters, and this lack of service is really becoming a significant inconvenience. I live in a suburban area, and my phone model is the Zephyr X2 Super, which I bought last year directly from you guys, so I kind of expected better service overall. Initially, I thought it might just be a temporary hiccup, but days have gone by without a connection, and it’s becoming frustrating. I checked my settings, restarted my device multiple times, and even tried to see if it was a network issue on my end, but everything seems to be fine with my phone. It’s hard to believe that I would not have at least a weak signal to work with, considering I live near the main road. Can you please explain why this might be happening and when I can expect this issue to be resolved? I really need to know what is going on here. Thanks for your attention to this matter, and I hope to hear back soon with a solution because I can't keep going on like this.",,category | priority | sentiment | needs_human | suggested_action,technical_issue | medium | negative | false | route_to_technical,technical_issue | high | negative | false | route_to_technical,priority,"No signal or data for days means blocked from the core service, which I read as high; medium is defensible.",N,priority=high,
+t00723,en,Great service on my last order! Thank you.,,category | priority | sentiment | needs_human | suggested_action,other | low | positive | false | reply_with_kb_article,other | low | positive | false | reply_with_kb_article,,,Y,,
+t00775,en,"Hi there! I'm considering getting the Zephyr Mobile Z5 phone, but I want to make sure it will work with my existing Bluetooth earbuds. They’re the SoundWave Pro model. Could you let me know if they’re compatible? Thanks a bunch! 
+Order No. 7585126.",,category | priority | sentiment | needs_human | suggested_action,product_question | low | neutral | false | reply_with_kb_article,product_question | low | neutral | false | reply_with_kb_article,,Friendly but warmth not strong; neutral or positive.,Y,,
+t01548,en,What is your refund policy and how long does it take?,,category | priority | sentiment | needs_human | suggested_action,refund | low | neutral | false | reply_with_kb_article,refund | low | neutral | false | reply_with_kb_article,,Refund policy question; refund or product_question both arguable.,Y,,
+t00976,en,"I am writing to express my utter frustration with the smart heater I purchased (Order A66626) from Glowhome. Just this morning, it began to SMOKE and SPARK while in use! This is completely unacceptable! I could have been seriously injured or worse! What are you doing to ensure the safety of your customers? This is a FIRE hazard! I demand an immediate response and resolution to this matter!",,category | priority | sentiment | needs_human | suggested_action,technical_issue | urgent | negative | true | escalate_to_safety_legal,technical_issue | urgent | negative | true | escalate_to_safety_legal,,Heater smoked and sparked.,Y,,
+t00417,ur,"Salam TaskNest team, 
+
+Yeh 3rd time hai ke mujhe app mein issues aa rahe hain 😡. 
+Main abhi task nahi kar pa raha, bohot pareshani ho rahi hai. 
+Mujhe compensation chahiye warna main competitor ki taraf ja raha hoon. 
+Meri subscription ka number No. 06462 hai. 
+Please jaldi respond karein,
+Yusuf","Hello TaskNest team. This is the third time I have problems in the app. I cannot do my tasks right now, very troublesome. I want compensation or I will move to a competitor. Subscription No. 06462. Please respond quickly.",category | priority | sentiment | needs_human | suggested_action,complaint | high | negative | true | escalate_to_supervisor,complaint | high | negative | true | escalate_to_supervisor,,,Y,,
+t00488,en,"hello, im writing because my order A17490 was supposed to arrive last week but it still hasn't. i really need it as i was counting on it for my new phone plan. can you please check on the shipping status? thanks",,category | priority | sentiment | needs_human | suggested_action,shipping | medium | neutral | false | route_to_shipping,shipping | medium | neutral | false | route_to_shipping,,,Y,,
+t00708,en,"I ordered a smart thermostat and camera combo (Order No. 32834) but the shipment is late, past the delivery date. This is really frustrating as I was expecting to use them this week. Additionally, I’d like to know if you offer any student discounts for future purchases.",,category | priority | sentiment | needs_human | suggested_action,shipping | medium | negative | false | route_to_shipping,shipping | medium | negative | false | route_to_shipping,,Second issue (student discount) is minor.,Y,,
+t00953,en,"Hey there, I've been trying to figure out how to schedule the smart plug with the Glowhome app, but it’s been really confusing. I thought it would be straightforward, but I'm not finding any clear instructions. Can you help me with this? My order number is ORD-11363379. Thanks!",,category | priority | sentiment | needs_human | suggested_action,product_question | low | negative | false | reply_with_kb_article,product_question | low | neutral | false | reply_with_kb_article,sentiment,,Y,,
+t00134,en,What are the washing instructions for my order?,,category | priority | sentiment | needs_human | suggested_action,product_question | low | neutral | false | ask_for_details,product_question | low | neutral | false | ask_for_details,,"Does not say which item; care instructions differ per product, so I chose ask_for_details. reply_with_kb_article is defensible.",Y,,
+t01497,en,"Hey Kestrel Team! 😊
+I've got a new adventure coming up and I'm moving abroad!
+Could you help me cancel my account (ORD-05063066)?
+Also, what's the deal with early termination fees? 
+Thanks a bunch! 👍",,category | priority | sentiment | needs_human | suggested_action,cancellation | medium | positive | false | process_cancellation,cancellation | medium | positive | false | process_cancellation,,,Y,,
+t01572,en,"Hey TaskNest Team, I've been considering my subscription lately and would like to cancel my plan associated with order A85642570. Can you guide me through the steps or confirm that this can be done? Thanks a ton for your help!",,category | priority | sentiment | needs_human | suggested_action,cancellation | medium | neutral | false | process_cancellation,cancellation | medium | neutral | false | process_cancellation,,Friendly sign-off; neutral or positive.,Y,,
+t00870,pt,"Olá, equipe Glowhome. Eu fiz um pedido recentemente, o número é A8449411, e estou enfrentando um grande problema. Fui transferida para uma nova residência e o endereço que usei para a compra não é mais válido. Eu pensei que poderia resolver isso bem antes do envio, mas agora estou começando a ficar preocupada com a possibilidade do meu pedido ser enviado para o endereço antigo e eu não saber como lidar com isso. Eu realmente preciso que vocês mudem o endereço de entrega associado a este pedido. A nova entrega deve ser feita para Rua das Flores, 123, São Paulo, SP. Por favor, me ajudem o mais rápido possível porque, embora eu não esteja totalmente bloqueada, isso é um grande inconveniente e não quero perder meus produtos. Aguardo uma resposta swift. Obrigada!",Moved house; asks to change the delivery address of order A8449411 to a new address in Sao Paulo before it ships; worried it will go to the old address; says she is not fully blocked but it is a big inconvenience.,category | priority | sentiment | needs_human | suggested_action,shipping | medium | negative | false | route_to_shipping,shipping | medium | negative | false | route_to_shipping,,Worried tone; says not fully blocked.,Y,,
+t00319,en,"Dear Kestrel Bank Support Team, 
+I am writing to express my dissatisfaction with the treatment I received during my recent interaction with your support team regarding my account A0539103. The agent I spoke with was noticeably rude and unhelpful, which only added to my frustration concerning the issues I was facing with my account. As a loyal customer, I expected a higher standard of service. I would appreciate it if you could address this matter promptly. Thank you for your attention to this issue. 
+Sincerely, 
+Lucas",,category | priority | sentiment | needs_human | suggested_action,complaint | medium | negative | true | escalate_to_supervisor,complaint | medium | negative | true | escalate_to_supervisor,,,Y,,
+t00161,en,"I’m really frustrated with Dashbite right now. I just noticed that the price for my recent order, A6924593, went up unexpectedly. I assume it's because a promotion ended, but this was not communicated at all. It feels really unfair to suddenly pay more without any warning. Additionally, I cannot find a way to download my past invoices on the app. Can you help me with both issues?",,category | priority | sentiment | needs_human | suggested_action,billing | medium | negative | false | route_to_billing,billing | medium | negative | false | route_to_billing,,Price increase plus invoice download question; billing check is the main issue.,Y,,
+t01500,en,order 00986027 was delivered cold and 40 mins late again. this has been happening too often. i really need some kind of voucher or something to make up for this awful service. really disappointed with dashbite lately. it's not what i expected.,,category | priority | sentiment | needs_human | suggested_action,complaint | medium | negative | true | escalate_to_supervisor,complaint | medium | negative | true | escalate_to_supervisor,,"Repeated cold and late food, asks for a voucher (compensation).",Y,,
+t00757,ur,"Assalamualaikum, Mujhe aapki madad ki zarurat hai. Mera account No. 72781050 hai aur mein is waqt banking app se locked out hoon. Yeh mere liye bahut masla hai kyunki mujhe aaj rent aur ek bill pay karna hai, lekin bina app ke yeh mumkin nahi. Mein kaafi dafa try kar chuki hoon lekin access nahi ho raha. Kripya meri madad karein jald se jald, warna mujhe bohot bara financial issue face karna par sakta hai. Shukriya.",Locked out of the banking app (account 72781050); has to pay rent and a bill today and cannot without the app; tried many times; asks for help as fast as possible or will face a big financial problem.,category | priority | sentiment | needs_human | suggested_action,account_access | urgent | negative | true | reset_account_access,account_access | urgent | negative | true | reset_account_access,,Locked out of banking app with rent due today: fully blocked from money.,Y,,
+t01051,en,"Dear Dashbite Support Team,
+
+I hope you are doing well. I am reaching out regarding my recent order #4378826. I noticed that the price for the items I selected increased unexpectedly, likely due to the conclusion of a promotion. Could you please verify this change and provide an explanation?
+
+Thank you for your attention to this matter. I look forward to your prompt response.
+
+Best regards,
+Laura",,category | priority | sentiment | needs_human | suggested_action,billing | medium | neutral | false | route_to_billing,billing | low | neutral | false | route_to_billing,priority,Polite request to verify a price change; low or medium.,Y,,
+t01325,en,"hi, i was wondering if you could consider adding a dark mode feature in the app? it would be so much easier on the eyes, especially at night. thanks! - wei",,category | priority | sentiment | needs_human | suggested_action,feature_request | low | neutral | false | reply_with_kb_article,feature_request | low | neutral | false | reply_with_kb_article,,Neutral or positive.,Y,,
+t01452,en,"Hey Dashbite! 😊 Just wanted to suggest a dark mode for the app. It would be super easy on the eyes, especially at night! Thanks for considering it! 🙌",,category | priority | sentiment | needs_human | suggested_action,feature_request | low | positive | false | reply_with_kb_article,feature_request | low | positive | false | reply_with_kb_article,,,Y,,
+t00237,en,"hey, i was just looking at my account info for order #575326 and i’m curious about how billing works if i decide to change my plan. like, do you prorate it or is it a set date thing? thanks!",,category | priority | sentiment | needs_human | suggested_action,billing | low | neutral | false | reply_with_kb_article,billing | low | neutral | false | reply_with_kb_article,,,Y,,
+t00578,en,Hey Dashbite team! Just wanted to drop a quick note to say thank you for the fantastic service with my recent order #099974! The food was delicious and arrived on time. You guys really know how to take care of your customers. Keep up the great work!,,category | priority | sentiment | needs_human | suggested_action,other | low | positive | false | reply_with_kb_article,other | low | positive | false | reply_with_kb_article,,,Y,,
+t00791,en,"Dear Kestrel Bank Support,
+
+I am writing to express my frustration regarding ongoing issues with my account, #973278. Despite my previous attempts to resolve these matters, I continue to encounter problems with transferring funds and accessing my statements through the app. This situation has not only caused me considerable inconvenience but has also had a financial impact on my ability to meet pending payments.
+
+If these issues are not addressed promptly, I will be forced to consider switching to a competitor, which I would prefer to avoid. I request immediate attention to my account's problems and expect compensation for the trouble caused. 
+
+Thank you for your attention to this matter.
+
+Sincerely,
+Jonas",,category | priority | sentiment | needs_human | suggested_action,complaint | high | negative | true | escalate_to_supervisor,complaint | high | negative | true | escalate_to_supervisor,,"Repeated problems, demands compensation, threatens to switch.",Y,,
+t01018,en,"I can't believe what I've been through. My order A74820 was meant to resolve my heating issues with your space heater, and I had high hopes for Glowhome's products based on your marketing. After waiting two weeks for delivery, the heater finally arrived, but it never worked properly from day one. I tried reaching out to your support team multiple times, but every time I called, I was either left on hold for ages or given vague answers that never helped solve the problem. I've followed all your recommended troubleshooting steps, and nothing has worked. Meanwhile, the temperature has dropped significantly in my home, putting my family's health at risk. Not only have we been uncomfortable, but my young children are now getting sick due to the cold. I've been left with no choice but to seek legal advice regarding this situation. I don't want to have to escalate this further, but if I don’t hear back from you soon, I will have to consult a lawyer about the unsafe conditions your product has caused. It's unacceptable to treat customers this way. I need a resolution immediately or I will be forced to take legal action. Please address this before it escalates further.",,category | priority | sentiment | needs_human | suggested_action,complaint | urgent | negative | true | escalate_to_safety_legal,complaint | urgent | negative | true | escalate_to_safety_legal,,Legal threat plus health risk.,Y,,
+t01466,ur,"hey zephyr team, mujhe apna mobile signal ya data nahi mil raha ghar par. kuch din ho gaye hain aisa scene hai. main ne ORD-20424 ke liye apply kiya tha, lekin abhi tak kuch nahi hua. ye bohat problematic hai kyun ke main apne kaam nahi kar paa rahi. please jaldi se dekhain ye masla kya hai. shukriya.",No mobile signal or data at home for several days; applied about ORD-20424 but nothing happened; cannot do her work; asks them to look quickly.,category | priority | sentiment | needs_human | suggested_action,technical_issue | medium | negative | false | route_to_technical,technical_issue | high | negative | false | route_to_technical,priority,Cannot work without signal or data; medium is defensible.,N,priority=high,
+t00264,en,"Subject: Issue with Smart Plug Connection
+
+Hello Glowhome Support,
+
+I’m reaching out to express my frustration with the smart plug I ordered (#61809), which I’ve been trying to set up for the past hour. It simply won’t connect to my home Wi-Fi network, and I’ve followed every step outlined in the setup guide. 
+
+From: Tom
+
+
+---
+I expect much better performance from your products. This is very disappointing, and I would really appreciate some help in resolving this issue, as it’s becoming quite inconvenient.
+
+Thanks,
+Tom",,category | priority | sentiment | needs_human | suggested_action,technical_issue | medium | negative | false | reply_with_kb_article,technical_issue | medium | negative | false | reply_with_kb_article,,Wifi setup problem; KB article first.,Y,,
+t00047,en,"Hey, I accidentally subscribed to the wrong service. I thought I was signing up for the time tracking app, not a project manager. My order number is ORD-19022941. Can you help? Thx! 😊",,category | priority | sentiment | needs_human | suggested_action,other | low | neutral | false | reply_with_kb_article,cancellation | medium | neutral | false | ask_for_details,"category, priority, suggested_action",Subscribed to the wrong product by mistake; unclear if they want cancel or refund. Dataset may treat this as other (wrong company).,N,category=cancellation; priority=medium; suggested_action=ask_for_details,
+t01153,en,Hey Dashbite! 😊 Just wanted to suggest a dark mode option for the app. Would be so much easier on the eyes at night! Thanks! 👍,,category | priority | sentiment | needs_human | suggested_action,feature_request | low | neutral | false | reply_with_kb_article,feature_request | low | positive | false | reply_with_kb_article,sentiment,,N,sentiment=positive,
+t01449,de,"Sehr geehrtes Threadline-Team,
+
+ich hoffe, es geht Ihnen gut. Mein Name ist Hina und ich interessiere mich für eine mögliche Partnerschaft mit Ihrem Unternehmen. Ich bin in der Modebranche tätig und glaube, dass eine Zusammenarbeit für beide Seiten von Vorteil sein könnte. 
+
+Könnten Sie mir bitte Informationen über Ihre Partnerprogramme oder Werbemöglichkeiten zukommen lassen? Ich freue mich auf Ihre Antwort.
+
+Mit freundlichen Grüßen,
+Hina",Formal letter: works in fashion and is interested in a partnership; asks for information on partner programs or advertising options.,category | priority | sentiment | needs_human | suggested_action,other | low | neutral | false | reply_with_kb_article,other | low | neutral | false | reply_with_kb_article,,,Y,,
+t00814,de,"Sehr geehrtes Kestrel Bank Team,
+
+ich hoffe, es geht Ihnen gut. Ich habe ein paar Fragen zu den verschiedenen Plänen und Optionen, die Sie anbieten. Insbesondere interessiert mich, welche Option am besten zu meinen Bedürfnissen passen würde. Mein Konto mit der Nummer 96085 habe ich seit einiger Zeit und würde gerne die für mich geeignete Lösung finden.
+
+Ich danke Ihnen im Voraus für Ihre Unterstützung und freue mich auf Ihre Antwort.
+
+Mit freundlichen Grüßen,
+Wei",Formal letter: has questions about the different plans and options and which one fits best; has had account 96085 for some time.,category | priority | sentiment | needs_human | suggested_action,product_question | low | positive | false | reply_with_kb_article,product_question | low | neutral | false | reply_with_kb_article,sentiment,,N,sentiment=neutral,
+t00148,en,"Hello Zephyr Mobile Team, 
+
+I am currently evaluating my options and would like to know which mobile plan would best suit my needs. I primarily use my phone for work-related calls and occasional streaming. Additionally, I would appreciate guidance on how to update my phone number associated with my account (ORD-53556093). 
+
+Thank you for your assistance.
+
+Best, 
+Jonas",,category | priority | sentiment | needs_human | suggested_action,product_question | low | neutral | false | reply_with_kb_article,product_question | low | neutral | false | reply_with_kb_article,,,Y,,
+t00191,en,"Dear Kestrel Bank Support Team,
+
+I hope you are doing well. I am writing to inform you that I will be moving overseas shortly, and I would like to inquire about the process of canceling my account associated with Order No. 49177. Additionally, I would appreciate clarification on any early termination fees that may apply. 
+
+Thank you for your assistance with this matter. I look forward to your prompt response.
+
+Best regards,
+Priya",,category | priority | sentiment | needs_human | suggested_action,cancellation | medium | positive | false | process_cancellation,cancellation | medium | neutral | false | process_cancellation,sentiment,,N,sentiment=neutral,
+t00652,en,"hey, i just wanted to know what your refund policy is for order A75361. how long does it take to get a refund once i initiate it? thanks!",,category | priority | sentiment | needs_human | suggested_action,refund | low | neutral | false | reply_with_kb_article,refund | low | neutral | false | reply_with_kb_article,,,Y,,
+t01163,en,"Hello Kestrel Bank support team! I’m trying to change the email associated with my account linked to order reference ORD-05391. Could you please guide me through the process? Additionally, I would like to know how I can download my past invoices. Thank you for your help!",,category | priority | sentiment | needs_human | suggested_action,account_access | low | positive | false | reply_with_kb_article,account_access | low | neutral | false | reply_with_kb_article,sentiment,,N,sentiment=neutral,
+t00765,en,Service has been down for four days. Request partial refund.,,category | priority | sentiment | needs_human | suggested_action,refund | medium | neutral | true | start_refund_review,refund | medium | neutral | true | start_refund_review,,,Y,,
+t00040,en,"Hey Zephyr team, I lost my phone last week, and I can't access my account because of the two-factor codes. I didn't think I'd need to keep my old phone for this! I really need to reset my access, as it's super inconvenient not being able to manage my account. My order number is 71657262. Can you help me out with this? Thanks!",,category | priority | sentiment | needs_human | suggested_action,account_access | medium | negative | false | reset_account_access,account_access | medium | neutral | false | reset_account_access,sentiment,Inconvenient but not blocked from money or work; high is defensible.,Y,,
+t00783,en,"hey glowhome, my smart thermostat and app aren’t syncing. order number ORD-55557. all my settings are wrong and i can’t adjust anything. i’ve tried restarting the devices but nothing works. super frustrating. please help soon, thx.",,category | priority | sentiment | needs_human | suggested_action,technical_issue | medium | negative | false | route_to_technical,technical_issue | medium | negative | false | route_to_technical,,,Y,,
+t00513,en,"Hey TaskNest team, I'm really fed up with your service. I want a refund for my account A51207049 and if I don't see it processed soon, I'm going to file a chargeback with my bank. This is ridiculous and I'm tired of waiting.",,category | priority | sentiment | needs_human | suggested_action,refund | high | negative | true | start_refund_review,refund | high | negative | true | start_refund_review,,Chargeback threat.,Y,,
+t00310,en,"hey, i just checked my order no. 05120461 from dashbite and noticed the price went up a lot. i thought there was a promo ending soon but this seems off. can someone confirm what happened? this is frustrating since i was expecting a different total. thanks.",,category | priority | sentiment | needs_human | suggested_action,billing | low | negative | false | route_to_billing,billing | medium | negative | false | route_to_billing,priority,Low or medium.,N,priority=medium,
+t00869,en,"Subject: Feature Suggestion for Kestrel Bank
+
+Dear Kestrel Bank Support Team,
+
+I wanted to take a moment to express how much I love using the Kestrel Bank app! Your intuitive design and seamless transactions have truly made my banking experience enjoyable.
+
+That said, I have a suggestion for a feature that could enhance the app's usability further. It would be fantastic if you could add a budgeting tool that helps users track their spending in real time. This feature could provide users with visual breakdowns of their spending categories and remind them when they are close to exceeding their budgets.
+
+Thank you for considering my suggestion! I can’t wait to see how Kestrel Bank continues to evolve in the future.
+
+Best regards,
+Hassan
+ORD-111271
+
+""I love using the Kestrel Bank app!""",,category | priority | sentiment | needs_human | suggested_action,feature_request | low | positive | false | reply_with_kb_article,feature_request | low | positive | false | reply_with_kb_article,,,Y,,
+t00184,en,"I have asked MULTIPLE times to cancel my subscription (#53269731), yet I am still being charged! This is absolutely ridiculous! I don’t want to continue using your service and feel like I am being taken advantage of! If this doesn’t get resolved IMMEDIATELY, I will leave a negative review! You need to take action NOW or I’ll escalate this further!",,category | priority | sentiment | needs_human | suggested_action,cancellation | high | negative | true | escalate_to_supervisor,cancellation | high | negative | true | escalate_to_supervisor,,"Repeated failed cancellations, still charged, threatens review.",Y,,

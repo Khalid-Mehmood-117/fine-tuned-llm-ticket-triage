@@ -49,6 +49,7 @@ languages in the dataset.
 | R4_CHARGEBACK | chargeback, dispute with my bank | needs_human=true, priority at least high |
 | R5_ESCALATION_CONSISTENCY | model chose an escalate_* action | needs_human=true |
 
+Keyword lists are reviewed against train and validation only, never test.
 Rules are unit tested with positive and negative examples (including "I am not going to sue,
 just want help" style negations, which are documented as a known keyword limitation if not handled).
 
@@ -63,6 +64,7 @@ ticket -> fine-tuned Qwen (greedy) -> parse + validate
 
 ## Dataset
 - Size: generate about 1,700 tickets with gpt-4o-mini so that about 1,500 remain after dedup.
+  (M1 result: dedup removed only 20, so 1,680 remain. All are kept.)
 - Labels come first: a sampler draws a target label set (category, priority, sentiment,
   needs_human, action) plus a product, a writing style and a language, then gpt-4o-mini writes a
   ticket that fits. The label is the sampled spec, not a gpt-4o-mini guess. Safety, legal and
@@ -76,8 +78,8 @@ ticket -> fine-tuned Qwen (greedy) -> parse + validate
 - Hard cases on purpose: multi-issue tickets (label is the most urgent issue), negated keywords,
   sarcasm, tickets with almost no information (action ask_for_details).
 - Dedup: exact match on normalized text, then near-duplicates with TF-IDF character n-grams and
-  cosine similarity (threshold set from a look at the score distribution, starting at 0.9).
-  Near-duplicate clusters are kept whole inside one split, so no near-duplicate crosses splits.
+  cosine similarity. Thresholds set in M1 by reading pairs per band: 0.85 or more is a duplicate
+  and is removed; 0.7 or more links tickets into a group that stays inside one split.
 - Split: 80/10/10 train/validation/test, stratified by category, fixed seed. A check script
   proves the max cross-split similarity is under the threshold.
 - Hand check: 50 test tickets, stratified by category, exported to `data/hand_check/test_50.csv`.
@@ -185,8 +187,9 @@ production API service, automatic replies to customers.
 2. gpt-4o-mini runs in JSON mode so its validity is measured on equal terms. A fourth eval row,
    gpt-4o-mini with strict structured outputs, is added and marked "validity by design".
 3. Hand check: Claude does a blind first pass on 50 test tickets and writes a review file with the
-   ticket, the dataset label, Claude's label and a blank confirm column. Khalid confirms each row,
-   then the agreement rate goes in the data card and corrections are applied to the test split.
+   ticket, the dataset label, Claude's label and a blank confirm column. A human reviewer confirms
+   each row, then the agreement rate goes in the data card and corrections are applied to the
+   test split. (Done in M1: 41 of 50 confirmed, 9 corrected.)
 4. Khalid runs the Colab notebook. It is a single Run all with one settings cell at the top for
    the Hugging Face token (Colab secret name) and the adapter repo name.
 5. HF_TOKEN is added before M2. M1 does not need it.

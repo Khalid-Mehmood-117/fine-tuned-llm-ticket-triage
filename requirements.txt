@@ -1,0 +1,7 @@
+# Local code (CPU only). Training dependencies live in notebooks/train.ipynb.
+openai==3.24.0
+pydantic==2.13.5
+scikit-learn==1.9.1
+numpy==2.5.3
+python-dotenv==1.2.4
+pytest==9.1.1

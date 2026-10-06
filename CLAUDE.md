@@ -52,4 +52,31 @@ Do this without being asked. A milestone is not complete until this is done.
   https://github.com/Khalid-Mehmood-117/fine-tuned-llm-ticket-triage.git (renamed from the
   misspelled ine-tuned-llm-ticket-triage), fetch verified. .env holds OPENAI_API_KEY and an empty
   HF_TOKEN. .env is gitignored.
-- Done: PLAN.md, CLAUDE.md, .env.example, .gitignore. Waiting for plan approval before M1.
+- Done: PLAN.md, CLAUDE.md, .env.example, .gitignore. Plan approved 2026-10-05 with decisions:
+  gpt-4o-mini in JSON mode plus a fourth "strict structured outputs" row marked validity by design,
+  Claude does a blind first pass on 50 test labels and Khalid confirms, Khalid runs the Colab
+  notebook (one Run all, settings cell at the top), HF_TOKEN not needed before M2.
+  Committed and pushed as 5369ad4.
+- Done: M1 dataset and splits (2026-10-06). .venv with pinned requirements.txt, package installed
+  editable from pyproject.toml. src/triage: schema.py (label sets, Pydantic Triage model),
+  labels.md (label definitions), rules.py (R1 to R5, keyword lists in 6 languages, escalate only).
+  scripts: scenarios.py (60 scenarios, 6 fictional companies, 9 styles, 6 languages),
+  generate_data.py (labels sampled first, gpt-4o-mini writes ticket and reason), dedup_split.py,
+  check_splits.py, hand_check.py (sample, build, apply).
+- M1 verification: 30-ticket pilot read by hand (fixed repeated order numbers and generic
+  reasons). Full run 1,700 tickets, 0 failures, 597,669 input and 186,029 output tokens including
+  the pilot, about $0.20. Dedup removed 2 exact and 18 near-duplicates (0.85), 1,680 kept. Split
+  1,343 / 169 / 168, grouped at 0.7; check_splits.py passes with max cross-split similarity 0.698.
+  Rule keywords widened using train and validation misses only (9 of 149 missed before, 0 after);
+  11 known over-escalations (8 negation, 3 loose wordings) kept on purpose (owner decision: they
+  are documented and on the safe side). Hand check: Claude's blind first pass agreed with the
+  dataset on 38/50 rows; a human reviewer confirmed 41/50 dataset labels (82%) and corrected 9
+  (priority 5, sentiment 4, one row also category and action), all matching the first pass.
+  Corrections applied to data/splits/test.jsonl, agreement in data/hand_check/agreement.json and
+  data/DATA_CARD.md. README heading fixed, synthetic data and bias notes added. pytest: 59 passed.
+- Notes from M1: the review CSV must be closed in Excel before scripts write it (Windows lock).
+  Reason sentences were not hand checked; t00047 keeps a reason from its old label (reason is
+  not scored). Test rule coverage has not been looked at; report it in M3.
+- Next: M2. Needs HF_TOKEN with write access in .env and as a Colab secret. Build
+  notebooks/train.ipynb (settings cell at the top, single Run all), Khalid runs it on a free T4,
+  then qwen_local.py loads the adapter on CPU.
