@@ -94,6 +94,12 @@ Do this without being asked. A milestone is not complete until this is done.
   count with apply_chat_template in transformers 5, and bf16 switched on by default in TRL 1.14
   (T4 has no bf16). Token lengths on the full splits: median 294, max 531; answers max 77 tokens.
   pytest: 74 passed.
+- Colab run 1 (2026-10-08, Khalid) failed at SFTTrainer: Colab preinstalls torchao 0.10.0 and
+  peft 0.21.2 raises ImportError for torchao below 0.16. Fix: the install cell uninstalls torchao
+  right after pip install (training does not use it) and stops with "restart session" if peft or
+  torchao are already loaded from an earlier run (same-session re-runs would keep the bad module).
+  Reproduced locally with a fake torchao 0.10.0 package: peft raised the same error, and both
+  guards fired. CPU smoke test passes again; pytest: 75 passed.
 - Next: Khalid runs the notebook in Colab (notebooks/README.md) and sends back the printed
   summary. Then load the Hub adapter locally on CPU with qwen_local.py, check valid JSON on a few
   validation tickets, record loss and metrics here, commit and push M2.

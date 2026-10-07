@@ -34,6 +34,10 @@ Early stopping may end training after 2 epochs if validation loss stops improvin
 
 ## If something goes wrong
 - **"No GPU found"**: the runtime is not T4. Repeat step 3, then *Run all* again.
+- **"Found an incompatible version of torchao"**: Colab preinstalls torchao 0.10, which peft
+  rejects. The install cell now uninstalls it. If you still see this, or the notebook says
+  "Libraries from an earlier run are still loaded", use *Runtime > Restart session* and then
+  *Runtime > Run all*.
 - **"Could not read the Colab secret 'HF_TOKEN'"**: the secret is missing, misnamed or
   *Notebook access* is off. Repeat step 2.
 - **401 or 403 when pushing**: the token is read-only. Create a write token at
